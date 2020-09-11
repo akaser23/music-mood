@@ -14,3 +14,18 @@ h2 {
 .btn {
     padding: 0 10px;
 }
+
+.low {
+    background-color: #1c8c22;
+    color: white;
+}
+
+.moderate {
+    background-color: #cf893a;
+    color: white;
+}
+
+.high {
+    background-color: tomato;
+    color: white;
+}
