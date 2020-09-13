@@ -89,3 +89,39 @@ var displayUv = function (uvIndex) {
 };
 
 cityFormEl.addEventListener("submit",formSubmitHandler);
+
+//var artist = document.querySelector("#main > div > div > div.ai.au.ah.av > div.ah.bk.bl > div > div.ah.bm.b6.bn > a > div:nth-child(2) > span").textContent;
+
+var token = function(){
+    fetch("https://accounts.spotify.com/api/token", {
+  "method": "POST",
+  "headers": {
+    "cookie": "__Host-device_id=AQBVARAj99vGL1xWEm25t5EbApEo-fIC_0HPVNTkn-4VLfGI-S0mxY3IbbCRrNCfp1FadLOxc--cYGDAdbu6Q_CUhECsyGyHxYU",
+    "authorization": "Basic MmI0MGNjYjZmYTRlNDRlMDg1M2VmNzhjODIxOWUxYTQ6OTk2MjE0NDk3YjZiNDE3OTlkOTQyMGZjZDIyZjczZjc=",
+    "content-type": "application/x-www-form-urlencoded"
+  },
+  "body": {
+    "grant_type": "client_credentials"
+  }
+})
+.then(response => {
+  console.log(response);
+})
+.catch(err => {
+  console.error(err);
+});
+};
+
+var getArtist = fetch(`https://api.spotify.com/v1/search?q=imaginedragons&type=artist`, {
+//var getArtist = fetch(`https://api.spotify.com/v1/search?q=${artist}&type=artist`, {
+  "method": "GET",
+  "headers": {
+    "authorization": "Bearer " + token.access_token
+  }
+})
+.then(response => {
+  console.log(response);
+})
+.catch(err => {
+  console.error(err);
+});
