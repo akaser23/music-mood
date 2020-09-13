@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +8,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="./assets/css/style.css"/>
+    <link rel="stylesheet" href="./assets/css/style.css" />
 
     <title>Mood Music</title>
 </head>
+
 <body>
     <div class="container">
         <div class="row">
@@ -28,11 +30,11 @@
 
             </div>
             <div class="col s9">
-                <div class="col-8 hide" id="weather-container">
+                <div class="row hide" id="weather-container">
                     <div>
                         <h3>
                             <span id="city-search-term"></span>
-                            <img id="icon" src=""/>
+                            <img id="icon" src="" />
                         </h3>
                         <p>
                             Temperature: <span id="temp"></span>
@@ -46,17 +48,19 @@
                         <p>
                             UV Index: <span id="uv"></span>
                         </p>
-        
+
                     </div>
+                    <div id="playlist-container" class="row">
+
+                    </div>
+                </div>
             </div>
+
         </div>
 
-    </div>
-
-    <iframe src="https://open.spotify.com/embed/playlist/3LndYn1dDYsphyFzTXbc0g" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="./assets/js/script.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="./assets/js/script.js"></script>
 </body>
+
 </html>
