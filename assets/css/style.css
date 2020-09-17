@@ -1,5 +1,5 @@
 .all-container {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   width: 100%;
   height: 100vh;
   margin: 0;
@@ -33,10 +33,9 @@
 h1 {
   font-size: 100px;
   padding-top: 15px;
-  font-family: 'Megrim', cursive;
-  color: #E0AD3D;
-  text-shadow: -1px 0 #E0AD3D, 0 1px #E0AD3D, 1px 0 #E0AD3D, 0 -1px #E0AD3D;
-
+  font-family: "Megrim", cursive;
+  color: #e0ad3d;
+  text-shadow: -1px 0 #e0ad3d, 0 1px #e0ad3d, 1px 0 #e0ad3d, 0 -1px #e0ad3d;
 }
 
 .low {
@@ -75,7 +74,7 @@ h1 {
 
 #city-search-term {
   font-size: 50px;
-  font-family: 'Advent Pro', sans-serif;
+  font-family: "Advent Pro", sans-serif;
   color: #263238;
 }
 
@@ -91,7 +90,7 @@ h1 {
   font-weight: bold;
   font-size: 25px;
   padding-bottom: 10px;
-  color: #263238
+  color: #263238;
 }
 
 #city-name:focus,
@@ -105,9 +104,8 @@ input[type="text"]:focus,
 input[type="text"]:active,
 input[type="text"]:target {
   -webkit-text-fill-color: #ffcd3c;
-  -webkit-box-shadow: 0 0 0px 1000px #000 inset;
   transition: background-color 5000s ease-in-out 0s;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 30px;
   font-weight: bold;
 }
@@ -183,6 +181,13 @@ input[type="text"]:target {
   #city-search-term {
     font-size: 30px;
   }
+
   #icon {
-      height: 40px;
+    height: 40px;
   }
+
+  .search-btn {
+    height: 35px;
+    margin-top: 10px;
+  }
+}
