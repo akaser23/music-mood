@@ -151,6 +151,10 @@ var displayPlaylist = function (weather) {
         playlistEl.innerHTML = '<iframe class="spotify" src="https://open.spotify.com/embed/playlist/4115GWyiQncaTuQmtDNefr" frameborder="0" id="music-player" allowtransparency="true" allow="encrypted-media"></iframe>';
         liquorType = "Tequila";
     }
+    else if (weather.weather[0].icon === "50n") {
+        playlistEl.innerHTML = '<iframe class="spotify" src="https://open.spotify.com/embed/playlist/4115GWyiQncaTuQmtDNefr" frameborder="0" id="music-player" allowtransparency="true" allow="encrypted-media"></iframe>';
+        liquorType = "Tequila";
+    }
     else if (weather.weather[0].main === "Clear") {
         playlistEl.innerHTML = '<iframe class="spotify" src="https://open.spotify.com/embed/playlist/37i9dQZF1DX1BzILRveYHb" frameborder="0" id="music-player" allowtransparency="true" allow="encrypted-media"></iframe>';
         liquorType = "Gin";

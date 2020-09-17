@@ -1,93 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@600&family=Megrim&family=Open+Sans&display=swap" rel="stylesheet">    
-    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@600&family=Megrim&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
 
     <title>Mood Music | The Weather Based Mood Selector</title>
     <link rel="icon" type="image/png" href="assets/images/fav.png" />
-</head>
+  </head>
 
-<body>
-    <div class="container-container">
-        <div class="container">
-            <div class="row center-align">
-                <h1>Mood Music</h1>
+  <body>
+    <div class="background-image"></div>
+    <div class="all-container">
+      <div class="row center-align">
+        <h1>Mood Music</h1>
+      </div>
+      <div class="row">
+        <form id="city-form" class="col s12">
+          <div class="col s6 offset-s2 l4 offset-l4">
+            <input id="city-name" type="text" required />
+          </div>
+          <div class="col s2 left-align">
+            <button type="submit" class="btn search-btn">
+              <span class="oi oi-magnifying-glass"></span>
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="row">
+        <div class="col s12">
+          <div class="hide" id="weather-container">
+            <div class="row col s12 center-align">
+              <div class="city-container">
+                <span id="city-search-term"></span>
+                <img id="icon" src="" />
+              </div>
+              <p class="weather-info">Temperature: <span id="temp"></span></p>
+              <p class="weather-info">Humidity: <span id="humidity"></span></p>
+              <p class="weather-info">Wind Speed: <span id="wind"></span></p>
+              <p class="weather-info">UV Index: <span id="uv"></span></p>
             </div>
-            <div class="row">
-                <form id="city-form" class="col s12">
-                        <div class="col s6 offset-s2 l4 offset-l4">
-                                <input id="city-name" type="text" required />
-                        </div>
-                        <div class="col s2 left-align">
-                            <button type="submit" class="btn search-btn"><span class="oi oi-magnifying-glass"></span></button>
-                        </div>
-                </form>
-            </div>
-            <div class="row">
-                <div class="col s12">
-                    <div class="hide" id="weather-container">
-                        <div class="row col s12 center-align">
-                            <div class="city-container">
-                                <span id="city-search-term"></span>
-                                <img id="icon" src="" />
-                            </div>
-                            <p class="weather-info">Temperature: <span id="temp"></span></p>
-                            <p class="weather-info">Humidity: <span id="humidity"></span></p>
-                            <p class="weather-info">Wind Speed: <span id="wind"></span></p>
-                            <p class="weather-info">UV Index: <span id="uv"></span></p>
-                        </div>
-                        <div class="row col s12">
-                            <div class="spotify-wrapper">
-                                <div class="col s12 m6 l6" id="playlist-container"></div>
-                            </div>
-                            <div class="col s12 m6 l6" id="cocktail-container">
-                                <div class="card">
-                                    <div class="card-image">
-                                        <img id="cocktail-thumb" src=""/>
-                                        <span id="cocktail-name" class="card-title"></span>    
-                                    </div>
-                                    <div class="card-content grey darken-4 white-text">
-                                        <ul>
-                                            <li><span id="ingredients1"></span> <span id="ingredients21"></span></li>
-                                            <li><span id="ingredients2"></span> <span id="ingredients22"></span></li>
-                                            <li><span id="ingredients3"></span> <span id="ingredients23"></span></li>
-                                            <li><span id="ingredients4"></span> <span id="ingredients24"></span></li>
-                                            <li><span id="ingredients5"></span> <span id="ingredients25"></span></li>
-                                            <li><span id="ingredients6"></span> <span id="ingredients26"></span></li>
-                                            <li><span id="ingredients7"></span> <span id="ingredients27"></span></li>
-                                            <li><span id="ingredients8"></span> <span id="ingredients28"></span></li>
-                                            <li><span id="ingredients9"></span> <span id="ingredients29"></span></li>
-                                            <li><span id="ingredients10"></span> <span id="ingredients210"></span></li>
-                                            <li><span id="ingredients11"></span> <span id="ingredients211"></span></li>
-                                            <li><span id="ingredients12"></span> <span id="ingredients212"></span></li>
-                                            <li><span id="ingredients13"></span> <span id="ingredients213"></span></li>
-                                            <li><span id="ingredients14"></span> <span id="ingredients214"></span></li>
-                                            <li><span id="ingredients15"></span> <span id="ingredients215"></span></li>
-                                        <br><li><span id="instructions"></span></li>
-                                        </ul>
-                                    </div>
-                                </div>                        
-                            </div>
-                        </div>
-                    </div>
+            <div class="row col s12">
+              <div class="spotify-wrapper">
+                <div class="col s12 m6 l6" id="playlist-container"></div>
+              </div>
+              <div class="col s12 m6 l6" id="cocktail-container">
+                <div class="card">
+                  <div class="card-image">
+                    <img id="cocktail-thumb" src="" />
+                    <span id="cocktail-name" class="card-title"></span>
+                  </div>
+                  <div class="card-content grey darken-4 white-text">
+                    <ul>
+                      <li>
+                        <span id="ingredients1"></span>
+                        <span id="ingredients21"></span>
+                      </li>
+                      <li>
+                        <span id="ingredients2"></span>
+                        <span id="ingredients22"></span>
+                      </li>
+                      <li>
+                        <span id="ingredients3"></span>
+                        <span id="ingredients23"></span>
+                      </li>
+                      <li>
+                        <span id="ingredients4"></span>
+                        <span id="ingredients24"></span>
+                      </li>
+                      <li>
+                        <span id="ingredients5"></span>
+                        <span id="ingredients25"></span>
+                      </li>
+                      <li>
+                        <span id="ingredients6"></span>
+                        <span id="ingredients26"></span>
+                      </li>
+                      <li>
+                        <span id="ingredients7"></span>
+                        <span id="ingredients27"></span>
+                      </li>
+                      <li>
+                        <span id="ingredients8"></span>
+                        <span id="ingredients28"></span>
+                      </li>
+                      <li>
+                        <span id="ingredients9"></span>
+                        <span id="ingredients29"></span>
+                      </li>
+                      <li>
+                        <span id="ingredients10"></span>
+                        <span id="ingredients210"></span>
+                      </li>
+                      <li>
+                        <span id="ingredients11"></span>
+                        <span id="ingredients211"></span>
+                      </li>
+                      <li>
+                        <span id="ingredients12"></span>
+                        <span id="ingredients212"></span>
+                      </li>
+                      <li>
+                        <span id="ingredients13"></span>
+                        <span id="ingredients213"></span>
+                      </li>
+                      <li>
+                        <span id="ingredients14"></span>
+                        <span id="ingredients214"></span>
+                      </li>
+                      <li>
+                        <span id="ingredients15"></span>
+                        <span id="ingredients215"></span>
+                      </li>
+                      <br />
+                      <li><span id="instructions"></span></li>
+                    </ul>
+                  </div>
                 </div>
-    
+              </div>
             </div>
-            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script src="./assets/js/script.js"></script>
-</body>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+  </body>
 </html>
