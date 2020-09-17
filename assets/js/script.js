@@ -148,7 +148,7 @@ var displayPlaylist = function (weather) {
         liquorType = "Rum";
     }
     else if (weather.weather[0].icon === "50d") {
-        playlistEl.innerHTML = '<iframe class="spotify" src="https://open.spotify.com/embed/playlist/4115GWyiQncaTuQmtDNefr" frameborder="0" id="music-player" allowtransparency="true" allow="encrypted-media"></iframe>';
+        playlistEl.innerHTML = '<iframe class="spotify" src="https://open.spotify.com/embed/playlist/7MEHlX41yRvYb50BAdXJnw" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>';
         liquorType = "Tequila";
     }
     else if (weather.weather[0].icon === "50n") {
@@ -156,7 +156,7 @@ var displayPlaylist = function (weather) {
         liquorType = "Tequila";
     }
     else if (weather.weather[0].main === "Clear") {
-        playlistEl.innerHTML = '<iframe class="spotify" src="https://open.spotify.com/embed/playlist/37i9dQZF1DX1BzILRveYHb" frameborder="0" id="music-player" allowtransparency="true" allow="encrypted-media"></iframe>';
+        playlistEl.innerHTML = '<iframe class="spotify" src="https://open.spotify.com/embed/playlist/4lAojdxdGSj4WQrX6Xr7w7" frameborder="0" id="music-player" allowtransparency="true" allow="encrypted-media"></iframe>';
         liquorType = "Gin";
     }
 
