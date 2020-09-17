@@ -1,31 +1,193 @@
-.container {
-    width: 90%;
+.all-container {
+  font-family: "Open Sans", sans-serif;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.background-image {
+  position: fixed;
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-image: url(../images/316370104-2667x1000.png);
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  animation: animatedBackground 50s linear infinite alternate;
+}
+
+@keyframes animatedBackground {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
 }
 
 h1 {
-    text-align: center;
-    margin: 15px 0;
-}
-
-h2 {
-    font-size: 20px;
-}
-
-.btn {
-    padding: 0 10px;
+  font-size: 100px;
+  padding-top: 15px;
+  font-family: "Megrim", cursive;
+  color: #e0ad3d;
+  text-shadow: -1px 0 #e0ad3d, 0 1px #e0ad3d, 1px 0 #e0ad3d, 0 -1px #e0ad3d;
 }
 
 .low {
-    background-color: #1c8c22;
-    color: white;
+  background-color: #1c8c22;
+  color: white;
 }
 
 .moderate {
-    background-color: #cf893a;
-    color: white;
+  background-color: #cf893a;
+  color: white;
 }
 
 .high {
-    background-color: tomato;
-    color: white;
+  background-color: tomato;
+  color: white;
+}
+
+.card {
+  padding: 0;
+  margin: 0;
+  width: 300px;
+  box-shadow: 10px 10px 8px #888888;
+  float: left;
+}
+
+.card-content {
+  background-color: #546e7a;
+}
+
+.spotify {
+  width: 300px;
+  height: 550px;
+  box-shadow: 10px 10px 8px #888888;
+  float: right;
+}
+
+#city-search-term {
+  font-size: 50px;
+  font-family: "Advent Pro", sans-serif;
+  color: #263238;
+}
+
+.city-container {
+  padding-bottom: 20px;
+}
+
+#icon {
+  padding-top: 10px;
+}
+
+.weather-info {
+  font-weight: bold;
+  font-size: 25px;
+  padding-bottom: 10px;
+  color: #263238;
+}
+
+#city-name:focus,
+#city-name:active,
+#city-name:target {
+  background-color: transparent;
+}
+
+input[type="text"],
+input[type="text"]:focus,
+input[type="text"]:active,
+input[type="text"]:target {
+  -webkit-text-fill-color: #ffcd3c;
+  transition: background-color 5000s ease-in-out 0s;
+  font-family: "Open Sans", sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#city-name {
+  color: #f0a500;
+  border-bottom: 2px solid #f0a500;
+}
+
+#city-name:focus + label {
+  color: #f0a500;
+  border-bottom: 2px solid #f0a500;
+}
+
+#city-name:focus {
+  border-bottom: 2px solid #f0a500;
+  box-shadow: 0 1px 0 0 #212121;
+}
+
+#city-name.valid {
+  border-bottom: 2px solid #f0a500;
+  box-shadow: 0 1px 0 0 #212121;
+}
+
+#city-name.invalid {
+  border: 2px solid red;
+  box-shadow: 0 1px 0 0 #212121;
+}
+
+#city-name.prefix.active {
+  color: #f0a500;
+}
+
+.search-btn {
+  background: linear-gradient(to right, #f0a500, #fee140);
+}
+
+.search-btn:hover {
+  box-shadow: 10px 10px 8px #888888;
+}
+
+#cocktail-name {
+  background-color: #212121;
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 50px;
+  }
+
+  .card {
+    float: none;
+    margin: auto;
+  }
+
+  .spotify {
+    float: none;
+    margin-bottom: 15px;
+  }
+
+  .spotify-wrapper {
+    text-align: center;
+    width: 100%;
+  }
+
+  input[type="text"],
+  input[type="text"]:focus,
+  input[type="text"]:active,
+  input[type="text"]:target {
+    font-size: 15px;
+  }
+
+  #city-search-term {
+    font-size: 30px;
+  }
+
+  #icon {
+    height: 40px;
+  }
+
+  .search-btn {
+    height: 35px;
+    margin-top: 10px;
+  }
 }
