@@ -1,18 +1,20 @@
-html {
-  background: #ffffff;
-  font-family: 'Open Sans', sans-serif;
-}
-
-body {
-  background: linear-gradient(to bottom, #3F5B5E, #AB95A1, #84A7AB)
-}
-
 .all-container {
+  font-family: 'Open Sans', sans-serif;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.background-image {
+  position: fixed;
+  z-index: -1;
   width: 100%;
   height: 100vh;
   margin: 0;
   padding: 0;
   background-image: url(../images/316370104-2667x1000.png);
+  background-color: #ffffff;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
@@ -184,10 +186,3 @@ input[type="text"]:target {
   #icon {
       height: 40px;
   }
-
-  .search-btn {
-      height: 35px;
-      margin-top: 10px
-  }
-
-}
