@@ -1,15 +1,17 @@
 html {
-  width: 100%;
-  height: 100vh;
+  background: #ffffff;
   font-family: 'Open Sans', sans-serif;
+}
+
+body {
   background: linear-gradient(to bottom, #3F5B5E, #AB95A1, #84A7AB)
 }
 
-/* #84a8ac */
-
-body {
+.all-container {
   width: 100%;
   height: 100vh;
+  margin: 0;
+  padding: 0;
   background-image: url(../images/316370104-2667x1000.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -26,18 +28,10 @@ body {
   }
 }
 
-.container {
-  width: 100%;
-  height: 100vh;
-}
-
 h1 {
   font-size: 100px;
   padding-top: 15px;
   font-family: 'Megrim', cursive;
-  /* background: linear-gradient(to right, #f0a500, #fee140);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; */
   color: #E0AD3D;
   text-shadow: -1px 0 #E0AD3D, 0 1px #E0AD3D, 1px 0 #E0AD3D, 0 -1px #E0AD3D;
 
@@ -154,7 +148,7 @@ input[type="text"]:target {
 }
 
 #cocktail-name {
-  text-shadow: 2px 2px 4px #000
+  background-color: #212121;
 }
 
 @media screen and (max-width: 600px) {

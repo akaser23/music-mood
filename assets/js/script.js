@@ -147,7 +147,7 @@ var displayPlaylist = function (weather) {
         playlistEl.innerHTML = '<iframe class="spotify" src="https://open.spotify.com/embed/playlist/4PH4kPc5WhaKH9kuuoJaqw" frameborder="0" id="music-player" allowtransparency="true" allow="encrypted-media"></iframe>';
         liquorType = "Rum";
     }
-    else if (weather.weather[0].icon === "50d") {
+    else if (weather.weather[0].icon === "50n") {
         playlistEl.innerHTML = '<iframe class="spotify" src="https://open.spotify.com/embed/playlist/4115GWyiQncaTuQmtDNefr" frameborder="0" id="music-player" allowtransparency="true" allow="encrypted-media"></iframe>';
         liquorType = "Tequila";
     }
