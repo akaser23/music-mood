@@ -61,6 +61,14 @@ h1 {
   float: left;
 }
 
+#city-name,
+#city-name:focus,
+#city-name:active,
+#city-name:target {
+  background-color: transparent;
+  font-size: 30px;
+}
+
 .card-content {
   background-color: #546e7a;
 }
