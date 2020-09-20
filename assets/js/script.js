@@ -10,6 +10,7 @@ var playlistEl = document.querySelector('#playlist-container');
 var liquorType = "";
 var cocktailName = document.querySelector("#cocktail-name");
 var cocktailImg = document.querySelector("#cocktail-thumb");
+var pastCocktails = [];
 
 var getCityWeather = function (city) {
     //format the github api url
@@ -40,7 +41,7 @@ var getCityWeather = function (city) {
                                 })
                             }
                         });
-                    
+
                 });
             } else {
                 alert("Error: " + response.statusText);
@@ -51,10 +52,10 @@ var getCityWeather = function (city) {
 var getCocktail = function () {
 
     fetch("https://www.thecocktaildb.com/api/json/v1/1/filter.php?i="
-    + liquorType )
-        .then(function(response) {
+        + liquorType)
+        .then(function (response) {
             if (response.ok) {
-                response.json().then (function (data) {
+                response.json().then(function (data) {
                     console.log(data);
                     displayCocktail(data);
                 })
@@ -62,19 +63,18 @@ var getCocktail = function () {
         })
 };
 
-var getInstructions = function(drinkId) {
+var getInstructions = function (drinkId) {
 
     fetch("https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i="
-    + drinkId )
-        .then(function(response) {
+        + drinkId)
+        .then(function (response) {
             if (response.ok) {
-                response.json().then (function (data) {
+                response.json().then(function (data) {
                     console.log(data);
                     displayDetail(data);
                 })
             }
         })
-
 };
 
 var formSubmitHandler = function (event) {
@@ -170,14 +170,18 @@ var displayCocktail = function (cocktails) {
     cocktailName.innerHTML = cocktails.drinks[i].strDrink;
 
     var drinkImgUrl = cocktails.drinks[i].strDrinkThumb;
-   
+
     $('#cocktail-thumb').attr('src', drinkImgUrl + "/preview");
 
     getInstructions(cocktails.drinks[i].idDrink);
+
+    pastCocktails.push(cocktails.drinks[i].strDrink);
+    localStorage.setItem('cocktail', JSON.stringify(pastCocktails));
+
 };
 
 var displayDetail = function (detail) {
-    
+
     $("#ingredients1").html(detail.drinks[0].strMeasure1);
     $("#ingredients21").html(detail.drinks[0].strIngredient1);
     $("#ingredients2").html(detail.drinks[0].strMeasure2);
@@ -215,3 +219,5 @@ var displayDetail = function (detail) {
 
 
 cityFormEl.addEventListener("submit", formSubmitHandler);
+
+
