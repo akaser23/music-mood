@@ -21,6 +21,10 @@ THEN I am presented with a spotify playlist to match that cities weather and a c
 - Moment
 - JQuery
 
+### APIs
+- OpenWeathermap
+- CocktailDB
+
 ## Challeneges
 Our first concept was to create just a music playlist depending on the weather and print the artist information that is currently playing to the side of the playlist. But, since embedded iframes make it hard to isolate certain elements, we had to think of something new. However, this work around gave the app and the user more to work with. What we eneded up creating had more than just music it had a drink as well. 
 
