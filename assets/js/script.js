@@ -81,7 +81,7 @@ var formSubmitHandler = function (event) {
     event.preventDefault();
 
     var city =$("#city-name").val()
-    localStorage.setItem(city, JSON.stringify()); 
+    localStorage.setItem("city", JSON.stringify(city)); 
     
     var cityName = cityInputEl.value.trim();
 
