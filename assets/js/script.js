@@ -80,6 +80,9 @@ var getInstructions = function(drinkId) {
 var formSubmitHandler = function (event) {
     event.preventDefault();
 
+    var city =$("#city-name").val()
+    localStorage.setItem(city, JSON.stringify()); 
+    
     var cityName = cityInputEl.value.trim();
 
     if (cityName) {
@@ -215,3 +218,4 @@ var displayDetail = function (detail) {
 
 
 cityFormEl.addEventListener("submit", formSubmitHandler);
+
